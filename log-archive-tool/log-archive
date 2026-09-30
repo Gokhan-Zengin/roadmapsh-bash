@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo "You must give a directory path"
+	exit 1
+elif [ $# -gt 1 ]; then
+	echo "Too many arguments!"
+	exit 1
+fi
+
+tar -cf "log_archive_$(date +%Y%m%d_%H%M%S).tar" "$1"

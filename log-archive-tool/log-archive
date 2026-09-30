@@ -8,4 +8,4 @@ elif [ $# -gt 1 ]; then
 	exit 1
 fi
 
-tar -cf "log_archive_$(date +%Y%m%d_%H%M%S).tar" "$1"
+tar -czf "log_archive_$(date +%Y%m%d_%H%M%S).tar.gz" "$1"
